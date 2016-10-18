@@ -12,6 +12,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Daniel Morgado
+ *	@version 0.1
+ */
 public class MainApp extends Application {
 
     private Stage primaryStage;
