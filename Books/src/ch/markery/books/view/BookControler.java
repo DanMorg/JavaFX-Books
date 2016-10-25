@@ -47,6 +47,13 @@ public class BookControler {
 	        // Initialize the person table with the two columns.
 	        titleColumn.setCellValueFactory(cellData -> cellData.getValue().getTitle());
 	        typeColumn.setCellValueFactory(cellData -> cellData.getValue().getType());
+	        
+	        //Clear person details
+	        showBookDetails(null);
+	        
+	        //Listen for selection and show the books deatis.
+	        bookTable.getSelectionModel().selectedItemProperty().addListener(
+	                (observable, oldValue, newValue) -> showBookDetails(newValue));
 	    }
 
 	    /**
@@ -60,4 +67,35 @@ public class BookControler {
 	        // Add observable list data to the table
 	        bookTable.setItems(mainApp.getBookData());
 	    }
+	    
+	    private void showBookDetails(Book book) {
+	        if (book != null) {
+	            // Fill the labels with info from the person object.
+	            titleLabel.setText(book.getTitle().toString());
+	            typeLabel.setText(book.getType().toString());
+	            authorLabel.setText(book.getAuthor().toString());
+	            pageLabel.setText(book.getPages().toString());
+	            VersionLabel.setText(book.getVersion().toString());
+
+	            // TODO: We need a way to convert the birthday into a String! 
+	            // birthdayLabel.setText(...);
+	        } else {
+	            // Person is null, remove all the text.
+	            titleLabel.setText("");
+	            typeLabel.setText("");
+	            authorLabel.setText("");
+	            pageLabel.setText("");
+	            VersionLabel.setText("");
+	         }
+	    }
+	    
+	    /**
+	     * Called when the user clicks on the delete button.
+	     */
+	    @FXML
+	    private void handleDeleteBook() {
+	        int selectedIndex = bookTable.getSelectionModel().getSelectedIndex();
+	        bookTable.getItems().remove(selectedIndex);
+	    }
+	    
 	}
