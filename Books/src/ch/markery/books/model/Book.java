@@ -19,12 +19,12 @@ import javafx.stage.Stage;
 public class Book  {
 
 	
-	private final StringProperty title;
-    private final StringProperty type;
-    private final StringProperty author;
-    private final StringProperty editorial;
-    private final IntegerProperty pages;
-    private final ObjectProperty<LocalDate> version;
+	private static StringProperty title;
+    private static StringProperty type;
+    private static StringProperty author;
+    private static StringProperty editorial;
+    private static IntegerProperty pages;
+    private static ObjectProperty<LocalDate> version;
 
     /**
      * Default constructor.
@@ -64,6 +64,22 @@ public class Book  {
 	}
 	public ObjectProperty<LocalDate> getVersion() {
 		return version;
+	}
+	
+	public void setTitle(StringProperty title){
+		this.title=title;
+	}
+	public void setType(StringProperty type){
+		this.type=type;
+	}
+	public void setAuthor(StringProperty author){
+		this.author=author;
+	}
+	public void setPages(IntegerProperty pages){
+		this.pages=pages;
+	}
+	public void setVersion(ObjectProperty <LocalDate> version){
+		this.version=version;
 	}
 	
 }

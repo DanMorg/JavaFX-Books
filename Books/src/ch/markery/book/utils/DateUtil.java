@@ -48,6 +48,7 @@ public class DateUtil {
 	/**
 	 * Checks the String whether it is a valid date.
 	 * 
+	 * 
 	 * @param dateString
 	 * @return true if the String is a valid date
 	 */
