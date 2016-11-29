@@ -10,7 +10,7 @@ import org.controlsfx.dialog.Dialogs;
 import ch.markery.books.MainApp;
 import ch.markery.books.model.Book;
 
-public class BookControler {
+public class BookControler {asd
 	@FXML
 	private TableView<Book> bookTable;
 	@FXML

@@ -22,7 +22,7 @@ import javafx.stage.Stage;
  * @author Joselu
  *	@version 0.1
  */
-public class MainApp extends Application {
+public class MainApp extends Application {asd
 
     private Stage primaryStage;
     private BorderPane rootLayout;

@@ -1,5 +1,6 @@
 package ch.markery.books.view;
 
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -10,7 +11,9 @@ import org.controlsfx.dialog.Dialogs;
  * 
  * @author Jose Luis Gracia Herrero y Daniel Morgado Jara
  */
-public class BookEditDialogController {
+public class BookEditDialogController {asd
+	
+	
 
 	@FXML
 	private TextField firstNameField;
@@ -79,8 +82,8 @@ public class BookEditDialogController {
 	@FXML
 	private void handleOk() {
 		if (isInputValid()) {
-			Book.(firstNameField.getText(22drtfygoij));
-			Book.setLastName(lastNameField.getText());
+			Book.setTitle(firstNameField.getText());
+			Book.set(lastNameField.getText());
 			Book.setStreet(streetField.getText());
 			Book.setPostalCode(Integer.parseInt(postalCodeField.getText()));
 			Book.setCity(cityField.getText());
