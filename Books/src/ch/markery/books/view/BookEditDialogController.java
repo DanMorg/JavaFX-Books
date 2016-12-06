@@ -1,4 +1,5 @@
 package ch.markery.books.view;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -85,11 +86,11 @@ public class BookEditDialogController {
     @FXML
     private void handleOk() {
         if (isInputValid()) {
-            person.setFirstName(firstNameField.getText());
-            person.setLastName(lastNameField.getText());
-            person.setStreet(streetField.getText());
+        	person.setTitle(firstNameField.getText());
+            person.setLastName(lastNameField.getText().toString());
+            person.setStreet(streetField.getText().toString());
             person.setPostalCode(Integer.parseInt(postalCodeField.getText()));
-            person.setCity(cityField.getText());
+            person.setCity(cityField.getText().toString());
             person.setBirthday(DateUtil.parse(birthdayField.getText()));
 
             okClicked = true;

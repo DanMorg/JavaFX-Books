@@ -5,10 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ch.markery.books.view.BookEditDialogController">
+<AnchorPane minHeight="300.0" minWidth="500.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.markery.books.view.BookEditDialogController">
    <children>
-      <GridPane layoutX="-6.0" layoutY="41.0" prefHeight="200.0" prefWidth="360.0">
+      <GridPane layoutX="-6.0" layoutY="41.0" prefHeight="200.0" prefWidth="360.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
             <Label text="tittle" />
             <TextField fx:id="firstNameField" GridPane.columnIndex="1" />
