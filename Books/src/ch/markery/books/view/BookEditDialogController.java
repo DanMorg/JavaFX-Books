@@ -6,12 +6,14 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.controlsfx.dialog.Dialogs;
 
+import ch.markery.book.utils.DateUtil;
+
 /**
  * Dialog to edit details of a person.
  * 
  * @author Jose Luis Gracia Herrero y Daniel Morgado Jara
  */
-public class BookEditDialogController {asd
+public class BookEditDialogController {
 	
 	
 
@@ -82,12 +84,12 @@ public class BookEditDialogController {asd
 	@FXML
 	private void handleOk() {
 		if (isInputValid()) {
-			Book.setTitle(firstNameField.getText());
-			Book.set(lastNameField.getText());
-			Book.setStreet(streetField.getText());
-			Book.setPostalCode(Integer.parseInt(postalCodeField.getText()));
-			Book.setCity(cityField.getText());
-			Book.setBirthday(DateUtil.parse(birthdayField.getText()));
+//			Book.setTitle(firstNameField.getText());
+//			Book.set(lastNameField.getText());
+//			Book.setStreet(streetField.getText());
+//			Book.setPostalCode(Integer.parseInt(postalCodeField.getText()));
+//			Book.setCity(cityField.getText());
+//			Book.setBirthday(DateUtil.parse(birthdayField.getText()));
 
 			okClicked = true;
 			dialogStage.close();

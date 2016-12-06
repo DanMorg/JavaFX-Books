@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-public class DateUtil {asd
+public class DateUtil {
 
 	/** The date pattern that is used for conversion. Change as you wish. */
 	private static final String DATE_PATTERN = "dd.MM.yyyy";

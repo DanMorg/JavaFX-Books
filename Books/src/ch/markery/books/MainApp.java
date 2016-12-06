@@ -22,7 +22,7 @@ import javafx.stage.Stage;
  * @author Joselu
  *	@version 0.1
  */
-public class MainApp extends Application {asd
+public class MainApp extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
@@ -103,35 +103,35 @@ public class MainApp extends Application {asd
             e.printStackTrace();
         }
     }
-    public boolean showBooksEditDialog(Book book) {
-        try {
-            // Load the fxml file and create a new stage for the popup dialog.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/PersonEditDialog.fxml"));
-            AnchorPane page = (AnchorPane) loader.load();
-
-            // Create the dialog Stage.
-            Stage dialogStage = new Stage();
-            dialogStage.setTitle("Edit Person");
-            dialogStage.initModality(Modality.WINDOW_MODAL);
-            dialogStage.initOwner(primaryStage);
-            Scene scene = new Scene(page);
-            dialogStage.setScene(scene);
-
-            // Set the book into the controller.
-            BookControler controller = loader.getController();
-            controller.setDialogStage(dialogStage);
-            controller.setPerson(person);
-
-            // Show the dialog and wait until the user closes it
-            dialogStage.showAndWait();
-
-            return controller.isOkClicked();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
+//    public boolean showBooksEditDialog(Book book) {
+//        try {
+//            // Load the fxml file and create a new stage for the popup dialog.
+//            FXMLLoader loader = new FXMLLoader();
+//            loader.setLocation(MainApp.class.getResource("view/PersonEditDialog.fxml"));
+//            AnchorPane page = (AnchorPane) loader.load();
+//
+//            // Create the dialog Stage.
+//            Stage dialogStage = new Stage();
+//            dialogStage.setTitle("Edit Person");
+//            dialogStage.initModality(Modality.WINDOW_MODAL);
+//            dialogStage.initOwner(primaryStage);
+//            Scene scene = new Scene(page);
+//            dialogStage.setScene(scene);
+//
+//            // Set the book into the controller.
+//            BookControler controller = loader.getController();
+//            controller.setDialogStage(dialogStage);
+//            controller.setC
+//
+//            // Show the dialog and wait until the user closes it
+//            dialogStage.showAndWait();
+//
+//            return controller.isOkClicked();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
     
     
     /**
@@ -143,6 +143,7 @@ public class MainApp extends Application {asd
     }
 
     public static void main(String[] args) {
+    	
         launch(args);
     }
 }

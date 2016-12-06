@@ -10,7 +10,7 @@ import org.controlsfx.dialog.Dialogs;
 import ch.markery.books.MainApp;
 import ch.markery.books.model.Book;
 
-public class BookControler {asd
+public class BookControler {
 	@FXML
 	private TableView<Book> bookTable;
 	@FXML
@@ -47,11 +47,11 @@ public class BookControler {asd
 	 */
 	@FXML
 	private void initialize() {
-		// Initialize the person table with the two columns.
+		// Initialize the book table with the two columns.
 		titleColumn.setCellValueFactory(cellData -> cellData.getValue().getTitle());
 		typeColumn.setCellValueFactory(cellData -> cellData.getValue().getType());
 
-		// Clear person details
+		// Clear book details
 		showBookDetails(null);
 
 		// Listen for selection and show the books deatis.

@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * @author Daniel Morgado
  *
  */
-public class Book  {asd
+public class Book  {
 
 	
 	private static StringProperty title;
