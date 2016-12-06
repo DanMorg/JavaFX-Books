@@ -85,6 +85,7 @@ public class BookEditDialogController {
      */
     @FXML
     private void handleOk() {
+    	/*
         if (isInputValid()) {
         	person.setTitle(firstNameField.getText());
             person.setLastName(lastNameField.getText().toString());
@@ -96,6 +97,7 @@ public class BookEditDialogController {
             okClicked = true;
             dialogStage.close();
         }
+        */
     }
 
     /**

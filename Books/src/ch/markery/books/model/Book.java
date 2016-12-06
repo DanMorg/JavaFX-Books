@@ -19,12 +19,12 @@ import javafx.stage.Stage;
 public class Book  {
 
 	
-	private static String title;
-    private static String type;
-    private static String author;
-    private static String editorial;
-    private static Integer pages;
-    private static String version;
+	private static StringProperty title;
+    private static StringProperty type;
+    private static StringProperty author;
+    private static StringProperty editorial;
+    private static IntegerProperty pages;
+    private static StringProperty version;
 
     /**
      * Default constructor.
@@ -38,68 +38,48 @@ public class Book  {
      * @param type
      */
     public Book(String title, String type) {
-        this.title = new String(title);
-        this.type = new String(type);
+        this.title = new SimpleStringProperty(title);
+        this.type = new SimpleStringProperty(type);
 
         // Some initial dummy data, just for convenient testing.
-        this.author = new String("someone");
-        this.pages = new Integer(100);
-        this.editorial = new String("some city");
-        this.version = new String(null, 1999, 2, 21);
+        this.author = new SimpleStringProperty("someone");
+        this.pages = new SimpleIntegerProperty(100);
+        this.editorial = new SimpleStringProperty("some city");
+        this.version = new SimpleStringProperty("v1");
     }
-	public String getTitle() {
+	public StringProperty getTitle() {
 		return title;
 	}
-	public String getType() {
+	public StringProperty getType() {
 		return type;
 	}
-	public String getAuthor() {
+	public StringProperty getAuthor() {
 		return author;
 	}
-	public String getEditorial() {
+	public StringProperty getEditorial() {
 		return editorial;
 	}
-	public Integer getPages() {
+	public IntegerProperty getPages() {
 		return pages;
 	}
-	public String getVersion() {
+	public StringProperty getVersion() {
 		return version;
 	}
 	
 	public void setTitle(String string){
-		this.title=string;
+		this.title=new SimpleStringProperty(string);
 	}
 	public void setType(String type){
-		this.type=type;
+		this.type=new SimpleStringProperty(type);
 	}
 	public void setAuthor(String author){
-		this.author=author;
+		this.author=new SimpleStringProperty(author);
 	}
 	public void setPages(Integer pages){
-		this.pages=pages;
+		this.pages=new SimpleIntegerProperty(pages);
 	}
 	public void setVersion(String version){
-		this.version=version;
-	}
-	public void setStreet(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	public void setLastName(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	public void setCity(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	public void setPostalCode(int parseInt) {
-		// TODO Auto-generated method stub
-		
-	}
-	public void setBirthday(LocalDate parse) {
-		// TODO Auto-generated method stub
-		
+		this.version=new SimpleStringProperty(version);
 	}
 	
 }
