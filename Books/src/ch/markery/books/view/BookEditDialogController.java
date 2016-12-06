@@ -16,7 +16,7 @@ import ch.markery.books.model.Book;
  * @author jose luis 
  */
 public class BookEditDialogController {
-
+//pakka
     @FXML
     private TextField firstNameField;
     @FXML
@@ -69,6 +69,7 @@ public class BookEditDialogController {
         birthdayField.setPromptText("dd.mm.yyyy");
     }
 
+    
     /**
      * Returns true if the user clicked OK, false otherwise.
      * 
